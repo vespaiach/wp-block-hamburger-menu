@@ -1,0 +1,49 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/hamburger-menu-icon/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+button.wp-block-create-block-hamburger-menu-icon {
+  background: transparent;
+  padding: 0px;
+  border: solid 1px #3e4145;
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+button.wp-block-create-block-hamburger-menu-icon > span {
+  display: block;
+  width: 68%;
+  height: 4px;
+  background: white;
+  border-radius: 6px;
+  transition: 0.3s ease-in-out;
+  position: absolute;
+  right: 16%;
+}
+button.wp-block-create-block-hamburger-menu-icon > span:nth-child(1) {
+  top: calc(var(--block-hamburger-menu-height-ratio) * 1 - 3px);
+}
+button.wp-block-create-block-hamburger-menu-icon > span:nth-child(2) {
+  top: calc(var(--block-hamburger-menu-height-ratio) * 2 - 3px);
+}
+button.wp-block-create-block-hamburger-menu-icon > span:nth-child(3) {
+  top: calc(var(--block-hamburger-menu-height-ratio) * 3 - 3px);
+}
+button.wp-block-create-block-hamburger-menu-icon.open > span:nth-child(1) {
+  top: calc(var(--block-hamburger-menu-height-ratio) * 2 - 3px);
+  transform: rotate(-45deg);
+}
+button.wp-block-create-block-hamburger-menu-icon.open > span:nth-child(2) {
+  opacity: 0;
+}
+button.wp-block-create-block-hamburger-menu-icon.open > span:nth-child(3) {
+  top: calc(var(--block-hamburger-menu-height-ratio) * 2 - 3px);
+  transform: rotate(45deg);
+}
