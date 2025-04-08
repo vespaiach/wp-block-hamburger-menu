@@ -2,11 +2,17 @@ import { __ } from "@wordpress/i18n";
 import {
 	PanelBody,
 	TextareaControl,
+	TextControl,
 	CustomSelectControl,
 } from "@wordpress/components";
-import { InspectorControls, useBlockProps } from "@wordpress/block-editor";
+import {
+	InspectorControls,
+	InspectorAdvancedControls,
+	useBlockProps,
+} from "@wordpress/block-editor";
+import { useEffect } from "@wordpress/element";
 
-const options = [
+export const options = [
 	{
 		key: 16,
 		name: "Small (16px x 16px)",
@@ -29,17 +35,23 @@ const options = [
 	},
 ];
 
-const lineHeights = {
+export const lineHeights = {
 	16: 1,
 	24: 1,
-	32: 2,
+	32: 1.5,
 	40: 2,
 	64: 3,
 };
 
 export default function Edit({ attributes, setAttributes }) {
-	const { executeOnClick, size } = attributes;
+	const { executeOnClick, size, anchor } = attributes;
 	const props = useBlockProps();
+
+	useEffect(() => {
+		if (!anchor) {
+			setAttributes({ anchor: `hamburger-menu-icon-${Date.now()}` });
+		}
+	}, [anchor]);
 
 	return (
 		<>
@@ -65,15 +77,31 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 			</InspectorControls>
+			<InspectorAdvancedControls>
+				<TextControl
+					__nextHasNoMarginBottom
+					__next40pxDefaultSize
+					label="HTML anchor"
+					help={__(
+						"Specify a unique anchor ID for this block. This allows you to link directly to this block.",
+						"hamburger-menu-icon",
+					)}
+					placeholder="hamburger-menu-icon-id"
+					value={anchor}
+					onChange={(nextValue) => {
+						setAttributes({
+							anchor: nextValue,
+						});
+					}}
+				/>
+			</InspectorAdvancedControls>
 			<button
 				{...props}
 				style={{
 					height: size,
 					width: size,
 					"--block-hamburger-menu-height-ratio": `${size / 4}px`,
-					"--block-hamburger-menu-line-height": `${
-						lineHeights[size] === 1 ? 1 : lineHeights[size] / 2
-					}px`,
+					"--block-hamburger-menu-line-height": `${lineHeights[size]}px`,
 				}}
 			>
 				<span />

@@ -10,13 +10,12 @@ return array(
 		'category' => 'widgets',
 		'description' => 'Hamburger-menu icon button',
 		'supports' => array(
-			'html' => false
+			'html' => true
 		),
 		'textdomain' => 'hamburger-menu-icon',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php',
-		'viewScript' => 'file:./view.js',
 		'attributes' => array(
 			'executeOnClick' => array(
 				'type' => 'string'
@@ -24,6 +23,9 @@ return array(
 			'size' => array(
 				'type' => 'integer',
 				'default' => 24
+			),
+			'anchor' => array(
+				'type' => 'string'
 			)
 		)
 	)

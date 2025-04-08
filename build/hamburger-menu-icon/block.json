@@ -7,13 +7,12 @@
   "category": "widgets",
   "description": "Hamburger-menu icon button",
   "supports": {
-    "html": false
+    "html": true
   },
   "textdomain": "hamburger-menu-icon",
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",
   "render": "file:./render.php",
-  "viewScript": "file:./view.js",
   "attributes": {
     "executeOnClick": {
       "type": "string"
@@ -21,6 +20,9 @@
     "size": {
       "type": "integer",
       "default": 24
+    },
+    "anchor": {
+      "type": "string"
     }
   }
 }
