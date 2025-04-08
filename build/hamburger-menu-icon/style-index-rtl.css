@@ -4,7 +4,7 @@
 button.wp-block-create-block-hamburger-menu-icon {
   background: transparent;
   padding: 0px;
-  border: solid 1px #3e4145;
+  border: solid 1px currentColor;
   display: block;
   position: relative;
   cursor: pointer;
@@ -13,7 +13,7 @@ button.wp-block-create-block-hamburger-menu-icon > span {
   display: block;
   width: 68%;
   height: calc(var(--block-hamburger-menu-line-height) * 2);
-  background: white;
+  background: currentColor;
   border-radius: 6px;
   transition: 0.3s ease-in-out;
   position: absolute;

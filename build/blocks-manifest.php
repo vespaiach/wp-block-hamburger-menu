@@ -10,7 +10,11 @@ return array(
 		'category' => 'widgets',
 		'description' => 'Hamburger-menu icon button',
 		'supports' => array(
-			'html' => true
+			'html' => true,
+			'color' => array(
+				'background' => true,
+				'text' => true
+			)
 		),
 		'textdomain' => 'hamburger-menu-icon',
 		'editorScript' => 'file:./index.js',

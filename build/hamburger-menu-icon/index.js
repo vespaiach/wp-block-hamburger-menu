@@ -8,7 +8,7 @@
   \********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/hamburger-menu-icon","version":"0.1.0","title":"Hamburger Menu Icon","category":"widgets","description":"Hamburger-menu icon button","supports":{"html":true},"textdomain":"hamburger-menu-icon","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php","attributes":{"executeOnClick":{"type":"string"},"size":{"type":"integer","default":24},"anchor":{"type":"string"}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/hamburger-menu-icon","version":"0.1.0","title":"Hamburger Menu Icon","category":"widgets","description":"Hamburger-menu icon button","supports":{"html":true,"color":{"background":true,"text":true}},"textdomain":"hamburger-menu-icon","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php","attributes":{"executeOnClick":{"type":"string"},"size":{"type":"integer","default":24},"anchor":{"type":"string"}}}');
 
 /***/ }),
 
