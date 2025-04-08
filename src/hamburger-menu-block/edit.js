@@ -10,7 +10,7 @@ import {
 	InspectorAdvancedControls,
 	useBlockProps,
 } from "@wordpress/block-editor";
-import { useEffect } from "@wordpress/element";
+import { useEffect, useState } from "@wordpress/element";
 
 export const options = [
 	{
@@ -45,24 +45,25 @@ export const lineHeights = {
 
 export default function Edit({ attributes, setAttributes }) {
 	const { executeOnClick, size, anchor } = attributes;
+	const [open, setOpen] = useState(false);
 	const props = useBlockProps();
 
 	useEffect(() => {
 		if (!anchor) {
-			setAttributes({ anchor: `hamburger-menu-icon-${Date.now()}` });
+			setAttributes({ anchor: `hamburger-menu-block-${Date.now()}` });
 		}
 	}, [anchor]);
 
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={__("Settings", "hamburger-menu-icon")}>
+				<PanelBody title={__("Settings", "hamburger-menu-block")}>
 					<TextareaControl
 						__nextHasNoMarginBottom
-						label={__("Javascript", "hamburger-menu-icon")}
+						label={__("Javascript", "hamburger-menu-block")}
 						help={__(
 							"Enter javascript to be executed when users click on the button",
-							"hamburger-menu-icon",
+							"hamburger-menu-block",
 						)}
 						value={executeOnClick || ""}
 						onChange={(value) => setAttributes({ executeOnClick: value })}
@@ -84,9 +85,9 @@ export default function Edit({ attributes, setAttributes }) {
 					label="HTML anchor"
 					help={__(
 						"Specify a unique anchor ID for this block. This allows you to link directly to this block.",
-						"hamburger-menu-icon",
+						"hamburger-menu-block",
 					)}
-					placeholder="hamburger-menu-icon-id"
+					placeholder="hamburger-menu-block-id"
 					value={anchor}
 					onChange={(nextValue) => {
 						setAttributes({
@@ -97,6 +98,7 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorAdvancedControls>
 			<button
 				{...props}
+				className={props.className + (open ? " open" : "")}
 				style={{
 					height: size,
 					width: size,
