@@ -5,21 +5,22 @@
 	"version": "0.1.0",
 	"title": "Hamburger Menu Icon",
 	"category": "widgets",
-	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
-	"example": {},
+	"description": "Hamburger-menu icon button",
 	"supports": {
 		"html": false
 	},
 	"textdomain": "hamburger-menu-icon",
 	"editorScript": "file:./index.js",
-	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
 	"render": "file:./render.php",
 	"viewScript": "file:./view.js",
 	"attributes": {
 		"executeOnClick": {
 			"type": "string"
+		},
+		"size": {
+			"type": "integer",
+			"default": 24
 		}
 	}
 }

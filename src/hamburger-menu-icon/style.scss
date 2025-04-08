@@ -1,16 +1,7 @@
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
-
 button.wp-block-create-block-hamburger-menu-icon {
 	background: transparent;
 	padding: 0px;
 	border: solid 1px #3e4145;
-	width: 40px;
-	height: 40px;
 	display: block;
 	position: relative;
 	cursor: pointer;
@@ -18,7 +9,7 @@ button.wp-block-create-block-hamburger-menu-icon {
 	& > span {
 		display: block;
 		width: 68%;
-		height: 4px;
+		height: calc(var(--block-hamburger-menu-line-height) * 2);
 		background: white;
 		border-radius: 6px;
 		transition: 0.3s ease-in-out;
@@ -26,17 +17,17 @@ button.wp-block-create-block-hamburger-menu-icon {
 		left: 16%;
 	}
 	& > span:nth-child(1) {
-		top: calc(var(--block-hamburger-menu-height-ratio) * 1 - 3px);
+		top: calc(var(--block-hamburger-menu-height-ratio) * 1 - var(--block-hamburger-menu-line-height));
 	}
 	& > span:nth-child(2) {
-		top: calc(var(--block-hamburger-menu-height-ratio) * 2 - 3px);
+		top: calc(var(--block-hamburger-menu-height-ratio) * 2 - var(--block-hamburger-menu-line-height));
 	}
 	& > span:nth-child(3) {
-		top: calc(var(--block-hamburger-menu-height-ratio) * 3 - 3px);
+		top: calc(var(--block-hamburger-menu-height-ratio) * 3 - var(--block-hamburger-menu-line-height));
 	}
 
 	&.open > span:nth-child(1) {
-		top: calc(var(--block-hamburger-menu-height-ratio) * 2 - 3px);
+		top: calc(var(--block-hamburger-menu-height-ratio) * 2 - var(--block-hamburger-menu-line-height));
 		transform: rotate(45deg);
 	}
 
@@ -45,7 +36,7 @@ button.wp-block-create-block-hamburger-menu-icon {
 	}
 
 	&.open > span:nth-child(3) {
-		top: calc(var(--block-hamburger-menu-height-ratio) * 2 - 3px);
+		top: calc(var(--block-hamburger-menu-height-ratio) * 2 - var(--block-hamburger-menu-line-height));
 		transform: rotate(-45deg);
 	}
 }
