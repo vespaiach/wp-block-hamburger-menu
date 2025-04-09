@@ -7,6 +7,7 @@ When clicked, the icon triggers an animation and allows you to run your own Java
 ### 🎬 Usage
 
 https://github.com/vespaiach/wp-block-hamburger-menu/raw/refs/heads/main/usage.mp4
+
 *The hamburger menu block in action*
 
 ### ✨ Features
