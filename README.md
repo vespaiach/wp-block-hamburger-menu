@@ -22,7 +22,7 @@ When clicked, the icon triggers an animation and allows you to run your own Java
 
 ## 🚀 Installation
 
-1. Upload the plugin folder to the `/wp-content/plugins/` directory.
+1. Download zip file in [releases](https://github.com/vespaiach/wp-block-hamburger-menu/releases) and upload the plugin folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the **Plugins** menu in WordPress.
 3. Use the block editor to add the **"Hamburger Menu Block"** block to your post or page.
 
