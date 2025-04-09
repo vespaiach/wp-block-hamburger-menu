@@ -6,7 +6,9 @@ When clicked, the icon triggers an animation and allows you to run your own Java
 
 ### 🎬 Usage
 
-https://github.com/vespaiach/wp-block-hamburger-menu/raw/refs/heads/main/usage.mp4
+<video src="https://github.com/vespaiach/wp-block-hamburger-menu/raw/refs/heads/main/usage.mp4" width="640" height="360" controls muted playsinline loop></video>
+
+*The hamburger menu block in action*
 
 *The hamburger menu block in action*
 

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+OUTPUT_ZIP="hamburger-menu-block.zip"
+
+zip -r "$OUTPUT_ZIP" . \
+  -x ".git/*" \
+  -x "./node_modules/*" \
+  -x "./src/*" \
+  -x "./make_zip" \
+  -x "*.mp4"
+
+echo "Project zipped to $OUTPUT_ZIP"
