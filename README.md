@@ -1,14 +1,12 @@
 # 🍔 Hamburger Menu Block
 
-This custom Gutenberg block ets you easily insert a stylish, animated hamburger menu icon into any post or page using the block editor.
+This custom Gutenberg block helps you easily insert a stylish, animated hamburger menu icon into any post or page using the block editor.
 
 When clicked, the icon triggers an animation and allows you to run your own JavaScript code — useful for toggling mobile menus, sidebars, or custom actions.
 
 ### 🎬 Usage
 
-<video src="https://github.com/vespaiach/wp-block-hamburger-menu/raw/refs/heads/main/usage.mp4" width="640" height="360" controls muted playsinline loop></video>
-
-*The hamburger menu block in action*
+[Hamburger Menu Block](https://github.com/vespaiach/wp-block-hamburger-menu/raw/refs/heads/main/usage.mp4)
 
 *The hamburger menu block in action*
 
@@ -29,7 +27,6 @@ When clicked, the icon triggers an animation and allows you to run your own Java
 3. Use the block editor to add the **"Hamburger Menu Block"** block to your post or page.
 
 ---
-
 
 ## 📄 License
 
